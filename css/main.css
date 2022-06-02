@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+iframe {
+  width: 100%;
+  scale: 0.8;
+}
+
+header .barraNav .nav-item {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header .barraNav .nav-item:hover {
+  background-color: rgba(248, 235, 163, 0.637);
+  transition: ease-out 1s;
+  transform: scale(1.05);
+}
+
+body {
+  background-image: url(../fotos/banner1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body .caja1 {
+  background-color: rgba(248, 235, 163, 0.5);
+  margin-bottom: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .caja1 h2 {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+
+body .caja1 p {
+  line-height: 2em;
+}
+
+body section {
+  text-align: center;
+  height: auto;
+  margin-top: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body section h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+body section p {
+  color: rgba(27, 26, 27, 0.918);
+  font-weight: lighter;
+  line-height: 2em;
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+
+.productos .productoscolumna {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.contactos {
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.propuestas img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.propuestas .dinamico {
+  background-color: rgba(248, 235, 163, 0.5);
+}
+
+.propuestas .integral {
+  background-color: rgba(248, 235, 163, 0.5);
+}
+
+.propuestas .elementos {
+  background-color: rgba(248, 235, 163, 0.5);
+}
+
+.pieDePagina {
+  width: auto;
+  background-color: rgba(54, 51, 54, 0.856);
+  height: auto;
+}
+
+.pieDePagina .grupo2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pieDePagina .grupo1 {
+  width: auto;
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  padding: 1rem 0;
+}
+
+.pieDePagina .grupo1 .box figure {
+  width: 100;
+  height: 100;
+  display: flex;
+  justify-content: center center;
+}
+
+.pieDePagina .grupo1 .box figure img {
+  width: 50px;
+}
+
+.pieDePagina .grupo1 .box h2 {
+  color: white;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.pieDePagina .grupo1 .box p {
+  color: #efefef;
+  margin-bottom: 3rem;
+}
+
+.pieDePagina .grupo1 .box .redes a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #ffa0ea;
+  margin-right: 10px;
+  background-color: rgba(125, 135, 165, 0.692);
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pieDePagina .grupo1 .box .redes a:hover {
+  color: blue;
+}
+
+@media screen and (max-width: 800px) {
+  .pieDePagina .grupo1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pieDePagina .grupo1 .box figure img {
+    text-align: center center;
+  }
+}

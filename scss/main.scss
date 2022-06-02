@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+iframe {
+    width: 100%;
+    scale: 0.8;
+
+}
+
+header {
+
+    .barraNav {
+
+
+
+        .nav-item {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+
+            &:hover {
+                background-color: rgba(248, 235, 163, 0.637);
+                transition: ease-out 1s;
+                transform: scale(1.05);
+
+            }
+
+        }
+
+    }
+}
+
+body {
+    background-image: url(/fotos/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .caja1 {
+        background-color: rgba(248, 235, 163, 0.5);
+        margin-bottom: 3em;
+        font-family: Arial, Helvetica, sans-serif;
+
+        h2 {
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            font-size: 2em;
+
+        }
+
+        p {
+            line-height: 2em;
+        }
+    }
+
+    section {
+        text-align: center;
+        height: auto;
+        margin-top: 5rem;
+        font-family: Arial, Helvetica, sans-serif;
+
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+
+        }
+
+        p {
+            color: rgba(27, 26, 27, 0.918);
+            font-weight: lighter;
+            line-height: 2em;
+            margin-top: 3rem;
+            font-size: 2rem;
+
+
+        }
+
+
+    }
+
+}
+
+
+.productos {
+    .productoscolumna {
+        margin-top: 5rem;
+        text-align: center;
+
+    }
+}
+
+.contactos {
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.propuestas {
+
+
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+
+    }
+
+    .dinamico {
+        background-color: rgba(248, 235, 163, 0.5);
+
+    }
+
+    .integral {
+        background-color: rgba(248, 235, 163, 0.5);
+    }
+
+    .elementos {
+        background-color: rgba(248, 235, 163, 0.5);
+    }
+
+
+}
+
+
+.pieDePagina {
+    width: auto;
+    background-color: rgba(54, 51, 54, 0.856);
+    height: auto;
+
+    .grupo2 {
+        background-color: #0a1a2a;
+        padding: 15px 10px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .grupo1 {
+        width: auto;
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5rem;
+        padding: 1rem 0;
+
+        .box {
+
+            figure {
+                width: 100;
+                height: 100;
+                display: flex;
+                justify-content: center center;
+
+
+                img {
+                    width: 50px;
+                }
+            }
+
+            h2 {
+                color: white;
+                margin-bottom: 3rem;
+                font-size: 1rem;
+            }
+
+            p {
+                color: #efefef;
+                margin-bottom: 3rem;
+            }
+
+            .redes {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    color: rgb(255, 160, 234);
+                    margin-right: 10px;
+                    background-color: rgba(125, 135, 165, 0.692);
+                    text-align: center;
+                    transition: all 300ms ease;
+
+                    &:hover {
+                        color: blue;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width:800px) {
+    .pieDePagina .grupo1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+        padding: 3rem 0;
+
+    }
+}
+
+@media screen and (max-width:800px) {
+    .pieDePagina .grupo1 .box figure img {
+        text-align: center center;
+    }
+
+}
