@@ -54,7 +54,7 @@ const productocalza = new Producto("Calza para Yoga", 122332, "calza talle M", 4
 const productoladrillo = new Producto("Ladrillo de goma", 122558, "elemento ladrillo de goma", 1600, "elemento")
 const productocamisa = new Producto("Camisa para Yoga", 122559, "camisa talle M", 3600, "ropa")
 
-var arrayProducto = []
+let arrayProducto = []
 
 arrayProducto.push(productocalza)
 arrayProducto.push(productocamisa)
@@ -73,7 +73,7 @@ const totalCarrito = () => {
 }
 
 const filtrarProductos = () => {
-    var tipo = prompt("Que tipo de productos desea ver?")
+    let tipo = prompt("Que tipo de productos desea ver?")
 
     switch (tipo) {
         case "elemento":
