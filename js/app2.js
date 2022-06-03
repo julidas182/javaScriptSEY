@@ -72,6 +72,8 @@ const totalCarrito = () => {
     return sumaTotal
 }
 
+
+
 const filtrarProductos = () => {
     let tipo = prompt("Que tipo de productos desea ver?")
 
@@ -114,45 +116,8 @@ const filtrarProductos = () => {
     }
 }
 
-const agregarProducto = () => {
-    const productoElegido = prompt('Por favor ingrese un producto').toLowerCase()
 
 
-    switch (productoElegido) {
-        case "productomat":
-            console.log('compraste el mat de yoga, el total es ' + (productomat.precio))
-            carrito.push(productomat)
-            break
-        case "productocalza":
-            console.log('compraste el calza de yoga, el total es ' + (productocalza.precio))
-            carrito.push(productocalza)
-            break
-        case "productoladrillo":
-            console.log('compraste ladrillo de goma, el total es ' + (productoladrillo.precio))
-            carrito.push(productoladrillo)
-            break
-        case "productocamisa":
-            console.log('compraste camisa, el total es ' + (productocamisa.precio))
-            carrito.push(productocamisa)
-            break
-        default:
-            console.log('Por favor, ingrese un producto valido')
-            break
-
-    }
-
-    const confirmarCompra = confirm("¿queres agregar mas productos al carrito?")
-
-    if (confirmarCompra) {
-        agregarProducto()
-    } else {
-        console.log("Finalizo la compra, el total es de $ " + totalCarrito())
-        console.log(carrito)
-
-    }
-}
-
-
-    // agregarProducto()
+    agregarProducto()
 
 
