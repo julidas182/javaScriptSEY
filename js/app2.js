@@ -1,7 +1,7 @@
-document.write("<h1>Menu de productos</h1>")
-document.write("<button onclick={agregarProducto()}>Agregar productos</button>")
-document.write("<br></br>")
-document.write("<button onclick={filtrarProductos()}>Filtrar</button>")
+// document.write("<h1>Menu de productos</h1>")
+// document.write("<button onclick={agregarProducto()}>Agregar productos</button>")
+// document.write("<br></br>")
+// document.write("<button onclick={filtrarProductos()}>Filtrar</button>")
 
 // let puntaje = "69"
 
@@ -54,7 +54,7 @@ const productocalza = new Producto("Calza para Yoga", 122332, "calza talle M", 4
 const productoladrillo = new Producto("Ladrillo de goma", 122558, "elemento ladrillo de goma", 1600, "elemento")
 const productocamisa = new Producto("Camisa para Yoga", 122559, "camisa talle M", 3600, "ropa")
 
-let arrayProducto = []
+const arrayProducto = []
 
 arrayProducto.push(productocalza)
 arrayProducto.push(productocamisa)
@@ -62,6 +62,27 @@ arrayProducto.push(productoladrillo)
 arrayProducto.push(productomat)
 
 const carrito = []
+
+const cardcontainer = document.getElementById('cardcontainer')
+
+
+arrayProducto.forEach((producto) => {
+    const cardproducto = document.createElement("div");
+    cardproducto.className = 'col-sm-4'
+    cardproducto.innerHTML = ` 
+    <div class="card  bg-dark text-white" style="width: 18rem;">
+        <img class="card-img-top" src="../imagenes-productos/inducalza-min.jpg"
+            alt="foto de calza color gris">
+        <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">${producto.descripcion}</p>
+            <p class="card-text">${producto.precio}</p>
+            <a href="#" class="btn btn-primary">AGREGAR A CARRITO</a>
+        </div>
+    </div>`;
+    cardcontainer.append(cardproducto);
+})
+
 
 
 const totalCarrito = () => {
@@ -118,6 +139,6 @@ const filtrarProductos = () => {
 
 
 
-    agregarProducto()
+filtrarProductos()
 
 
