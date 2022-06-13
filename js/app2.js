@@ -40,26 +40,23 @@ while(nombreUsuario != "juliandasc"){
 //ENTREGABLE OBLIGATORIO 1
 
 class Producto {
-    constructor(nombre, codigo, descripcion, precio, tipo) {
+    constructor(nombre, codigo, descripcion, precio, tipo, img) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.precio = precio;
         this.tipo = tipo;
+        this.img = img;
     }
 }
 
-const productomat = new Producto("Mat de Yoga", 122345, "mat de yoga de 1.8m de goma espuma", 3200, "elemento")
-const productocalza = new Producto("Calza para Yoga", 122332, "calza talle M", 4300, "ropa")
-const productoladrillo = new Producto("Ladrillo de goma", 122558, "elemento ladrillo de goma", 1600, "elemento")
-const productocamisa = new Producto("Camisa para Yoga", 122559, "camisa talle M", 3600, "ropa")
+const productomat = new Producto("Mat de Yoga", 122345, "mat de yoga de 1.8m de goma espuma", 3200, "elemento", "/imagenes-productos/elemento3-min.jpg")
+const productocalza = new Producto("Calza para Yoga", 122332, "calza talle M", 4300, "ropa", "/imagenes-productos/inducalza-min.jpg" )
+const productoladrillo = new Producto("Ladrillo de goma", 122558, "elemento ladrillo de goma", 1600, "elemento", "/imagenes-productos/elemento2-min.jpg")
+const productocamisa = new Producto("Conjunto remera y calza", 122559, "remera y calza talle M", 3600, "ropa", "/imagenes-productos/induconjunto-min.jpg")
 
-const arrayProducto = []
+const arrayProducto = [productocalza, productocamisa, productoladrillo, productomat]
 
-arrayProducto.push(productocalza)
-arrayProducto.push(productocamisa)
-arrayProducto.push(productoladrillo)
-arrayProducto.push(productomat)
 
 const carrito = []
 
@@ -68,21 +65,35 @@ const cardcontainer = document.getElementById('cardcontainer')
 
 arrayProducto.forEach((producto) => {
     const cardproducto = document.createElement("div");
-    cardproducto.className = 'col-sm-4'
+    cardproducto.className = 'col-sm-4 mt-5'
     cardproducto.innerHTML = ` 
     <div class="card  bg-dark text-white" style="width: 18rem;">
-        <img class="card-img-top" src="../imagenes-productos/inducalza-min.jpg"
-            alt="foto de calza color gris">
+        <img class="card-img-top" src="${producto.img}"
+            alt="${producto.nombre}">
         <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
             <p class="card-text">${producto.descripcion}</p>
             <p class="card-text">${producto.precio}</p>
-            <a href="#" class="btn btn-primary">AGREGAR A CARRITO</a>
+            <button href="#" data-id = "${producto.codigo}" class="botonDeCompra">AGREGAR A CARRITO</button>
         </div>
     </div>`;
     cardcontainer.append(cardproducto);
 })
 
+const botonCompra = document.querySelectorAll('.botonDeCompra');
+
+
+const productoAgregado = (e) => {
+    const productoElegido = e.target.getAttribute('data-id')
+    // console.log(productoElegido);
+    const productoBuscado = arrayProducto.find((producto) => producto.codigo == productoElegido)
+    carrito.push(productoBuscado)
+    console.log(carrito);
+}
+
+botonCompra.forEach((boton) => {
+    boton.addEventListener('click', productoAgregado)
+})
 
 
 const totalCarrito = () => {
@@ -94,7 +105,7 @@ const totalCarrito = () => {
 }
 
 
-
+/*
 const filtrarProductos = () => {
     let tipo = prompt("Que tipo de productos desea ver?")
 
@@ -141,4 +152,4 @@ const filtrarProductos = () => {
 
 filtrarProductos()
 
-
+*/
