@@ -161,6 +161,50 @@ body section p {
   color: blue;
 }
 
+                                         /* agregamos nuevo */                           
+.cartContainer {
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end}
+
+.cartRow {
+  border: 1px solid gray;
+  width: 30%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cartHeader {
+  margin-top: 50px;
+  font-size: 20px;
+  border: none;
+}
+
+.cartImg {
+  width: 15%;
+}
+
+.cartImg img {
+  width: 100%;
+}
+
+.cartTitle {
+  width: 35%;
+}
+
+.cartDesc {
+  width: 25%;
+}
+
+.cartPrice {
+  width: 25%;
+}
+
+
 @media screen and (max-width: 800px) {
   .pieDePagina .grupo1 {
     width: 90%;

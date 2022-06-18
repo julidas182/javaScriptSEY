@@ -58,7 +58,8 @@ const productocamisa = new Producto("Conjunto remera y calza", 122559, "remera y
 const arrayProducto = [productocalza, productocamisa, productoladrillo, productomat]
 
 
-const carrito = []
+let carrito = JSON.parse(localStorage.getItem('carrito')) || []
+
 
 const cardcontainer = document.getElementById('cardcontainer')
 
@@ -80,7 +81,28 @@ arrayProducto.forEach((producto) => {
     cardcontainer.append(cardproducto);
 })
 
-const botonCompra = document.querySelectorAll('.botonDeCompra');
+const cartContainer = document.querySelector('#cartContainer')
+const botonCompra = document.querySelectorAll('.botonDeCompra')
+const botonCarrito = document.querySelector('#botonCarrito')
+
+
+const imprimirCarrito = () => {
+    cartContainer.innerHTML = ''
+    carrito.forEach((producto) => {
+        const cartRow = document.createElement('div')
+        cartRow.className = 'cartRow'
+        cartRow.innerHTML = `
+        <div class="cartImg">
+        <img src="${producto.img}">
+        </div>
+        <div class="cartTitle"><span> ${producto.nombre}</span></div>
+        <div class="cartPrice"><span> $${producto.precio}</span></div>
+        `
+        cartContainer.append(cartRow)
+    })
+} 
+
+
 
 
 const productoAgregado = (e) => {
@@ -88,12 +110,17 @@ const productoAgregado = (e) => {
     // console.log(productoElegido);
     const productoBuscado = arrayProducto.find((producto) => producto.codigo == productoElegido)
     carrito.push(productoBuscado)
-    console.log(carrito);
+    imprimirCarrito()
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
 botonCompra.forEach((boton) => {
     boton.addEventListener('click', productoAgregado)
 })
+
+
+botonCarrito.addEventListener('click', imprimirCarrito)
+
 
 
 const totalCarrito = () => {
@@ -104,6 +131,13 @@ const totalCarrito = () => {
     return sumaTotal
 }
 
+
+// probando pushbar
+
+var pushbar = new Pushbar({
+    blur:true,
+    overlay:true,
+})
 
 /*
 const filtrarProductos = () => {
