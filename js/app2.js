@@ -48,8 +48,16 @@ const imprimirCarrito = () => {
 carrito.length > 0 && imprimirCarrito() //renderizo el carrito si existe algo dentro
 
 const botonEliminar = document.querySelectorAll('.botonEliminar')
+const botonVaciarCarrito = document.querySelector('#vaciarCarrito')
+// console.log(botonEliminar);    
 
-console.log(botonEliminar);    
+const carritoEliminado = () => {
+    carrito = []
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    imprimirCarrito()
+}
+
+botonVaciarCarrito.addEventListener('click', carritoEliminado)
 
 
 const productoEliminado = (e) => {
@@ -58,12 +66,17 @@ const productoEliminado = (e) => {
     carrito.pop(prodAEliminar)
     imprimirCarrito()
     localStorage.setItem('carrito', JSON.stringify(carrito))
+
 }
 
+// const mostrarId = (e) => {
+//     console.log(e.target.getAttribute('data-id'));
+// }
 
 botonEliminar.forEach((boton) => {
     boton.addEventListener('click', productoEliminado)
 })
+
 
 
 const productoAgregado = (e) => {
