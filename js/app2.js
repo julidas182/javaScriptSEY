@@ -62,12 +62,16 @@ botonVaciarCarrito.addEventListener('click', carritoEliminado)
 
 const productoEliminado = (e) => {
     const prodEliminado = e.target.getAttribute('data-id')
-    const prodAEliminar = arrayProducto.find((producto) => producto.codigo == prodEliminado)
-    carrito.pop(prodAEliminar)
-    imprimirCarrito()
+    const prodAEliminar = carrito.find((producto) => producto.codigo == prodEliminado)
+    const index = carrito.indexOf(prodAEliminar)
+    carrito.splice(index, 1)
+    // carrito.pop(prodAEliminar)
+    
     localStorage.setItem('carrito', JSON.stringify(carrito))
-
+    imprimirCarrito()
 }
+
+
 
 // const mostrarId = (e) => {
 //     console.log(e.target.getAttribute('data-id'));
