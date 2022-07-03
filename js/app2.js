@@ -52,9 +52,28 @@ const botonVaciarCarrito = document.querySelector('#vaciarCarrito')
 // console.log(botonEliminar);    
 
 const carritoEliminado = () => {
-    carrito = []
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-    imprimirCarrito()
+    Swal.fire({
+        title: '¿Segurx?',
+        text: "¿Queres borrar el carrito?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'si, quiero borrarlo!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Borrado',
+            'Se borró su carrito de compras',
+            'success',
+            carrito = [],
+            localStorage.setItem('carrito', JSON.stringify(carrito)),
+            imprimirCarrito()
+          )
+        }
+      })
+    
+    
 }
 
 botonVaciarCarrito.addEventListener('click', carritoEliminado)
@@ -66,9 +85,9 @@ const productoEliminado = (e) => {
     const index = carrito.indexOf(prodAEliminar)
     carrito.splice(index, 1)
     // carrito.pop(prodAEliminar)
-    
     localStorage.setItem('carrito', JSON.stringify(carrito))
-    imprimirCarrito()
+    imprimirCarrito()   
+    
 }
 
 
