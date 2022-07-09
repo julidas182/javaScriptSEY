@@ -88,7 +88,7 @@ const productoEliminado = (e) => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
     imprimirCarrito()   
     
-}
+} 
 
 
 
