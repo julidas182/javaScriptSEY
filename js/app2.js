@@ -24,7 +24,12 @@ arrayProducto.forEach((producto) => {
 
 const cartContainer = document.querySelector('#cartContainer')
 const botonCompra = document.querySelectorAll('.botonDeCompra')
-
+const productoEliminado = (e) => {
+    const prodEliminado = e.target.getAttribute('data-id')
+    carrito = carrito.filter((producto) => producto.codigo != prodEliminado)
+    imprimirCarrito()   
+    localStorage.setItem('carrito', JSON.stringify(carrito))     
+} 
 
 
 const imprimirCarrito = () => {
@@ -39,10 +44,14 @@ const imprimirCarrito = () => {
         </div>
         <div class="cartTitle"><span> ${nombre}</span></div>
         <div class="cartPrice"><span> $${precio}</span></div>
-        <button data-id = "${codigo}" class="btn btn-primary botonEliminar" type="submit">X</button>
+        <button data-id = "${codigo}" class="btn btn-primary botonEliminar" type="submit">Borrar</button>
         `
         cartContainer.append(cartRow)
     })
+    document.querySelectorAll('.botonEliminar').forEach((botonEliminar) => {
+        botonEliminar.addEventListener('click', productoEliminado)
+    })
+
 } 
 
 carrito.length > 0 && imprimirCarrito() //renderizo el carrito si existe algo dentro
@@ -77,30 +86,6 @@ const carritoEliminado = () => {
 }
 
 botonVaciarCarrito.addEventListener('click', carritoEliminado)
-
-
-const productoEliminado = (e) => {
-    const prodEliminado = e.target.getAttribute('data-id')
-    const prodAEliminar = carrito.find((producto) => producto.codigo == prodEliminado)
-    const index = carrito.indexOf(prodAEliminar)
-    carrito.splice(index, 1)
-    // carrito.pop(prodAEliminar)
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-    imprimirCarrito()   
-    
-} 
-
-
-
-// const mostrarId = (e) => {
-//     console.log(e.target.getAttribute('data-id'));
-// }
-
-botonEliminar.forEach((boton) => {
-    boton.addEventListener('click', productoEliminado)
-})
-
-
 
 const productoAgregado = (e) => {
     const productoElegido = e.target.getAttribute('data-id')
