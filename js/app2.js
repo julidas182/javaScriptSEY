@@ -1,10 +1,12 @@
 let carrito = JSON.parse(localStorage.getItem('carrito')) || []
-
+let arrayProducto 
 
 const cardcontainer = document.getElementById('cardcontainer')
 
 
-arrayProducto.forEach((producto) => {
+const renderizarProductos = (array) => {
+    // cardcontainer.innerHTML = ''
+array.forEach((producto) => {
     const {nombre, codigo, descripcion, precio, tipo, img} = producto;
     const cardproducto = document.createElement("div");
     cardproducto.className = 'col-sm-4 mt-5'
@@ -21,6 +23,7 @@ arrayProducto.forEach((producto) => {
     </div>`;
     cardcontainer.append(cardproducto);
 })
+}
 
 const cartContainer = document.querySelector('#cartContainer')
 const botonCompra = document.querySelectorAll('.botonDeCompra')
@@ -100,7 +103,7 @@ botonCompra.forEach((boton) => {
 })
 
 
-
+console.log();
 
 
 
@@ -111,7 +114,20 @@ const totalCarrito = () => {
     })
     return sumaTotal
 }
+/*
+fetch('../data/productos.json')
+    .then((res) => res.json())
+    .then((jsonresponse) => renderizarProductos(jsonresponse.data)) 
+
+ */   
 
 
+const cargarProductos = async () => {
+    const res = await fetch('../data/productos.json')
+    const {data} = await res.json()
+    arrayProducto = data
+    renderizarProductos(arrayProducto)
+}
 
 
+cargarProductos()
