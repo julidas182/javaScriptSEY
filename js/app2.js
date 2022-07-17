@@ -23,10 +23,11 @@ array.forEach((producto) => {
     </div>`;
     cardcontainer.append(cardproducto);
 })
+agregarListenerBotones()
 }
 
 const cartContainer = document.querySelector('#cartContainer')
-const botonCompra = document.querySelectorAll('.botonDeCompra')
+
 const productoEliminado = (e) => {
     const prodEliminado = e.target.getAttribute('data-id')
     carrito = carrito.filter((producto) => producto.codigo != prodEliminado)
@@ -98,12 +99,25 @@ const productoAgregado = (e) => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
-botonCompra.forEach((boton) => {
-    boton.addEventListener('click', productoAgregado)
-})
 
 
-console.log();
+
+// const agregarListenerBotones = () => {
+//     const pokemonButton = document.querySelectorAll('.menuTab')
+//     pokemonButton.forEach((button) => {
+//         button.addEventListener('click', renderizarDatosPokemon)
+//     })
+// }
+
+
+
+const agregarListenerBotones = () => {
+        const botonCompra = document.querySelectorAll('.botonDeCompra')
+        botonCompra.forEach((boton) => {
+        boton.addEventListener('click', productoAgregado)
+    })
+}
+
 
 
 
