@@ -205,6 +205,21 @@ body section p {
   width: 25%;
 }
 
+.modal {
+  display: none;
+  position: absolute;
+  width: 60%;
+  height: auto;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.modalOpen {
+  display: block;
+}
+
 
 
 @media screen and (max-width: 800px) {

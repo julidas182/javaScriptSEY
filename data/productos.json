@@ -4,7 +4,7 @@
             "nombre" : "Mat de Yoga", 
             "codigo" : "122345",
             "descripcion" : "mat de yoga de 1.8m de goma espuma",
-            "precio" : "3200",
+            "precio" : 3200,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento3-min.jpg"
         },
@@ -12,7 +12,7 @@
             "nombre" : "Calza para Yoga", 
             "codigo" : "122332",
             "descripcion" : "calza talle M",
-            "precio" : "4300",
+            "precio" : 4300,
             "tipo" : "ropa",
             "img" : "/imagenes-productos/inducalza-min.jpg"
         },
@@ -20,7 +20,7 @@
             "nombre" : "Ladrillo de goma", 
             "codigo" : "122558",
             "descripcion" : "elemento ladrillo de goma",
-            "precio" :  "1600",
+            "precio" :  1600,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento2-min.jpg"
         },
@@ -28,7 +28,7 @@
             "nombre" : "Conjunto remera y calza", 
             "codigo" : "122559",
             "descripcion" : "remera y calza talle M",
-            "precio" :  "3600",
+            "precio" :  3600,
             "tipo" : "ropa",
             "img" : "/imagenes-productos/induconjunto-min.jpg"
         },
@@ -36,7 +36,7 @@
             "nombre" : "Rodillo", 
             "codigo" : "122560",
             "descripcion" : "Rodillo tenturado de goma",
-            "precio" :  "1350",
+            "precio" :  1350,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento1-min.jpg"
         },
@@ -44,7 +44,7 @@
             "nombre" : "Ladrillo de color", 
             "codigo" : "122561",
             "descripcion" : "Ladrillo de distintos colores de 20x30x5cm",
-            "precio" :  "1850",
+            "precio" :  1850,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento2-min.jpg"
         },
@@ -52,7 +52,7 @@
             "nombre" : "Ladrillo macizo", 
             "codigo" : "122562",
             "descripcion" : "Ladrillo maziso sin color de 20x30x5cm",
-            "precio" :  "1500",
+            "precio" :  1500,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento4-min.jpg"  
         },
@@ -60,7 +60,7 @@
             "nombre" : "Almohadon y colchoneta", 
             "codigo" : "122563",
             "descripcion" : "Almohadon de meditacion y Colchoneta",
-            "precio" :  "3900",
+            "precio" :  3900,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento5-min.jpg"
         },
@@ -68,7 +68,7 @@
             "nombre" : "Cintas elasticas", 
             "codigo" : "122564",
             "descripcion" : "Cintas elasticas x 3 (distintos colores)",
-            "precio" :  "2100",
+            "precio" :  2100,
             "tipo" : "elemento",
             "img" : "/imagenes-productos/elemento-min.jpg"
         },
@@ -76,7 +76,7 @@
             "nombre" : "Aceite de Lavanda", 
             "codigo" : "122565",
             "descripcion" : "Extracto natural de Lavanda para aromaterapia",
-            "precio" :  "700",
+            "precio" :  700,
             "tipo" : "aromas y mas",
             "img" : "/imagenes-productos/aromasaceite-min.jpg"
         },
@@ -84,7 +84,7 @@
             "nombre" : "Lampara de Sal", 
             "codigo" : "122566",
             "descripcion" : "lampara de sal 20cm de alto",
-            "precio" :  "3500",
+            "precio" :  3500,
             "tipo" : "aromas y mas",
             "img" : "/imagenes-productos/aromaslamparasal-min.jpg"
         },
@@ -92,7 +92,7 @@
             "nombre" : "Saumerios Incienso", 
             "codigo" : "122567",
             "descripcion" : "Saumerios x 20 unidades de Incienso",
-            "precio" :  "500",
+            "precio" :  500,
             "tipo" : "aromas y mas",
             "img" : "/imagenes-productos/aromassaumerio-min.jpg"
         },
@@ -100,7 +100,7 @@
             "nombre" : "Saumo", 
             "codigo" : "122568",
             "descripcion" : "Saumo de Romero y Lavanda",
-            "precio" :  "700",
+            "precio" :  700,
             "tipo" : "aromas y mas",
             "img" : "/imagenes-productos/aromassaumo-min.jpg"
         }

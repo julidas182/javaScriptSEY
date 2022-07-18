@@ -62,6 +62,17 @@ carrito.length > 0 && imprimirCarrito() //renderizo el carrito si existe algo de
 
 const botonEliminar = document.querySelectorAll('.botonEliminar')
 const botonVaciarCarrito = document.querySelector('#vaciarCarrito')
+const modal = document.querySelector('.modal')
+const botonCarrito = document.querySelector('.botonCarrito')
+
+
+const toggleCarrito = () => {
+    modal.classList.toggle('modalOpen')
+    console.log(modal.classList);
+    imprimirCarrito()
+}
+botonCarrito.addEventListener('click', toggleCarrito)
+
 // console.log(botonEliminar);    
 
 const carritoEliminado = () => {
