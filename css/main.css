@@ -172,7 +172,7 @@ body section p {
 
 .cartRow {
   border: 1px solid gray;
-  width: 30%;
+  width: 60%;
   padding: 20px 10px;
   display: flex;
   justify-content: flex-end;
@@ -208,19 +208,29 @@ body section p {
 .modal {
   display: none;
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: auto;
   background-color: whitesmoke;
   border-radius: 10px;
   overflow: hidden;
+  justify-content: end;
 
+}
+
+.botones {
+  display: row;
 }
 
 .modalOpen {
   display: block;
 }
 
-
+.modalBody {
+  height: 85%;
+  display: row;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 800px) {
   .pieDePagina .grupo1 {

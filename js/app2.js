@@ -58,6 +58,10 @@ const imprimirCarrito = () => {
 
 } 
 
+
+
+
+
 carrito.length > 0 && imprimirCarrito() //renderizo el carrito si existe algo dentro
 
 const botonEliminar = document.querySelectorAll('.botonEliminar')
